@@ -18,13 +18,30 @@ class App extends React.Component {
     };
   }
 
+  createItem = text => {
+    if (text !== '') {
+      this.setState(({ data }) => {
+        const newItem = {
+          id: new Date().toISOString(),
+          title: text,
+          status: false,
+        };
+        const newArr = [...data, newItem];
+
+        return {
+          data: newArr,
+        };
+      });
+    }
+  };
+
   render() {
     const { data } = this.state;
 
     return (
       <div className='app'>
         <TodoHeader />
-        <TodoAddForm />
+        <TodoAddForm createItem={this.createItem} />
         <TodoList data={data} />
       </div>
     );
