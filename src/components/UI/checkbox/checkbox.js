@@ -7,11 +7,13 @@ class Checkbox extends React.Component {
     super(props);
   }
   render() {
-    const { id } = this.props;
+    const { id, onComplete, status } = this.props;
 
     return (
       <div className='checkbox'>
         <input
+          checked={status && 'checked'}
+          onChange={onComplete}
           className='checkbox__input'
           id={'checkbox-' + id}
           type='checkbox'

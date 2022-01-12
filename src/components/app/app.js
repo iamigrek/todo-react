@@ -43,6 +43,10 @@ class App extends React.Component {
     });
   };
 
+  onComplete = id => {
+    console.log(id);
+  };
+
   render() {
     const { data } = this.state;
 
@@ -50,7 +54,11 @@ class App extends React.Component {
       <div className='app'>
         <TodoHeader />
         <TodoAddForm createItem={this.createItem} />
-        <TodoList deleteitem={this.deleteitem} data={data} />
+        <TodoList
+          onComplete={this.onComplete}
+          deleteitem={this.deleteitem}
+          data={data}
+        />
       </div>
     );
   }
