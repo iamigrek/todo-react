@@ -12,7 +12,7 @@ class App extends React.Component {
     this.state = {
       data: [
         { id: 1, title: 'some1', status: false },
-        { id: 2, title: 'some2', status: true },
+        { id: 2, title: 'some2', status: false },
         { id: 3, title: 'some3', status: false },
       ],
     };
@@ -44,7 +44,16 @@ class App extends React.Component {
   };
 
   onComplete = id => {
-    console.log(id);
+    this.setState(({ data }) => {
+      return {
+        data: data.map(item => {
+          if (item.id === id) {
+            return { ...item, status: !item.status };
+          }
+          return item;
+        }),
+      };
+    });
   };
 
   render() {
