@@ -8,7 +8,7 @@ const TodoList = props => {
   const el = data.map(item => {
     const { id, ...itemProps } = item;
 
-    return <TodoListItem key={id} {...itemProps} />;
+    return <TodoListItem key={id} id={id} {...itemProps} />;
   });
 
   return <ul className='todo__list'>{el}</ul>;
