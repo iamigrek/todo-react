@@ -1,9 +1,21 @@
-const App = () => {
-  return (
-    <div className='app'>
-      <h1>todo list using class components</h1>
-    </div>
-  );
-};
+import React from 'react';
+import TodoAddForm from '../todo-add-form/todo-add-form';
+
+import TodoHeader from '../todo-header/todo-header';
+import TodoList from '../todo-list/todo-list';
+
+import './app.css';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div className='app'>
+        <TodoHeader />
+        <TodoList />
+        <TodoAddForm />
+      </div>
+    );
+  }
+}
 
 export default App;
