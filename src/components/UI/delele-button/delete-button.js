@@ -4,8 +4,10 @@ import './delete-button.css';
 
 class DeleteButton extends React.Component {
   render() {
+    const { deleteitem } = this.props;
+
     return (
-      <button className='delete-button'>
+      <button className='delete-button' onClick={deleteitem}>
         <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 58.67'>
           <g id='Layer_2' data-name='Layer 2'>
             <g id='Layer_1-2' data-name='Layer 1'>

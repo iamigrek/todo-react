@@ -5,11 +5,8 @@ import DeleteButton from '../UI/delele-button/delete-button';
 import './todo-list-item.css';
 
 class TodoListItem extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
-    const { title, status, id } = this.props;
+    const { title, status, id, deleteitem } = this.props;
     const compl = status && 'todo__item--compl';
 
     return (
@@ -18,7 +15,7 @@ class TodoListItem extends React.Component {
           <Checkbox id={id} />
           <h2 className='todo__item-title'>{title}</h2>
         </div>
-        <DeleteButton />
+        <DeleteButton deleteitem={deleteitem} />
       </li>
     );
   }

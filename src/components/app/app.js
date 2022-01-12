@@ -35,6 +35,14 @@ class App extends React.Component {
     }
   };
 
+  deleteitem = id => {
+    this.setState(({ data }) => {
+      return {
+        data: data.filter(item => item.id !== id),
+      };
+    });
+  };
+
   render() {
     const { data } = this.state;
 
@@ -42,7 +50,7 @@ class App extends React.Component {
       <div className='app'>
         <TodoHeader />
         <TodoAddForm createItem={this.createItem} />
-        <TodoList data={data} />
+        <TodoList deleteitem={this.deleteitem} data={data} />
       </div>
     );
   }
