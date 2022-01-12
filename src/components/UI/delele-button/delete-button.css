@@ -1,0 +1,16 @@
+.delete-button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+.delete-button svg {
+	width: 25px;
+	height: 30px;
+	fill: #573748;
+	transition: all .2s ease;
+}
+
+.delete-button:hover svg {
+	fill: #9A617F;
+}

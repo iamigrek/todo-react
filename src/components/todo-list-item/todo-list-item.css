@@ -1,0 +1,23 @@
+.todo__item {
+	background-color: #222325;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: 15px;
+	padding: 10px 20px;
+}
+
+.todo__item-title {
+	font-weight: 400;
+	font-size: 18px;
+	max-width: 640px;
+}
+
+.todo__item-left {
+	display: flex;
+	align-items: center;
+}
+
+.todo__item:not(:last-child) {
+	margin-bottom: 20px;
+}
