@@ -7,6 +7,10 @@
 	padding: 10px 20px;
 }
 
+.todo__item--compl {
+	opacity: .5;
+}
+
 .todo__item-title {
 	font-weight: 400;
 	font-size: 18px;

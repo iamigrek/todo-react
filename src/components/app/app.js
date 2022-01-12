@@ -12,7 +12,7 @@ class App extends React.Component {
     this.state = {
       data: [
         { id: 1, title: 'some1', status: false },
-        { id: 2, title: 'some2', status: false },
+        { id: 2, title: 'some2', status: true },
         { id: 3, title: 'some3', status: false },
       ],
     };

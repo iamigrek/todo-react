@@ -9,10 +9,12 @@ class TodoListItem extends React.Component {
     super(props);
   }
   render() {
-    const { title } = this.props;
+    const { title, status } = this.props;
+
+    const compl = status && 'todo__item--compl';
 
     return (
-      <li className='todo__item'>
+      <li className={'todo__item' + ' ' + compl}>
         <div className='todo__item-left'>
           <Checkbox />
           <h2 className='todo__item-title'>{title}</h2>
